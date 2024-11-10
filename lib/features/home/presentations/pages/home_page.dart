@@ -88,14 +88,14 @@ class _HomePageState extends State<HomePage> {
             } else {
               return maplibre.MapLibreMap(
                 initialCameraPosition: maplibre.CameraPosition(
-                  target: maplibre.LatLng(23.835677, 90.380325),
+                  target: maplibre.LatLng(23.82370521059016, 90.36413396728604),
                   zoom: 12,
                 ),
                 onMapCreated: (controller) {
                   mController = controller;
                 },
                 styleString:
-                    'https://map.barikoi.com/styles/osm-liberty/style.json?key=AIzaSyBPFXXCpBJPpjS1w0h9kIQfTlt0r6HL2G0',
+                    'https://map.barikoi.com/styles/osm-liberty/style.json?key=bkoi_5bacf61a76e5047364b3540a662f1ee5865f03ef8736d7475f18538c3fb52a8e',
               );
             }
           },
