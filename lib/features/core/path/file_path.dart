@@ -14,3 +14,5 @@ export 'package:flutter_polyline_points/flutter_polyline_points.dart';
 export 'package:location/location.dart';
 export 'package:barikoi/features/home/presentations/bloc/home_bloc.dart';
 export 'package:barikoi/features/home/data/repositories/home_repository.dart';
+export 'package:barikoi/features/home/data/models/reverce/reverce.geocoding.model.dart';
+export 'dart:convert';

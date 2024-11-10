@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => HomeBloc( homeRepository: HomeRepository()),
+          create: (context) => HomeBloc(homeRepository: HomeRepository()),
         ),
       ],
       child: const MaterialApp(

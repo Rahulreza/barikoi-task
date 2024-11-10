@@ -567,6 +567,7 @@ abstract class _PermissionRequested implements HomeEvent {
 
 /// @nodoc
 mixin _$HomeState {
+  Reverce get reverceModelDataResponce => throw _privateConstructorUsedError;
   String get selectedValue => throw _privateConstructorUsedError;
   HomeStatus get status => throw _privateConstructorUsedError;
   bool get locationServiceEnabled => throw _privateConstructorUsedError;
@@ -587,7 +588,8 @@ abstract class $HomeStateCopyWith<$Res> {
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
   $Res call(
-      {String selectedValue,
+      {Reverce reverceModelDataResponce,
+      String selectedValue,
       HomeStatus status,
       bool locationServiceEnabled,
       bool permissionGranted,
@@ -609,6 +611,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? reverceModelDataResponce = null,
     Object? selectedValue = null,
     Object? status = null,
     Object? locationServiceEnabled = null,
@@ -616,6 +619,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? mapController = freezed,
   }) {
     return _then(_value.copyWith(
+      reverceModelDataResponce: null == reverceModelDataResponce
+          ? _value.reverceModelDataResponce
+          : reverceModelDataResponce // ignore: cast_nullable_to_non_nullable
+              as Reverce,
       selectedValue: null == selectedValue
           ? _value.selectedValue
           : selectedValue // ignore: cast_nullable_to_non_nullable
@@ -649,7 +656,8 @@ abstract class _$$HomeStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String selectedValue,
+      {Reverce reverceModelDataResponce,
+      String selectedValue,
       HomeStatus status,
       bool locationServiceEnabled,
       bool permissionGranted,
@@ -669,6 +677,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? reverceModelDataResponce = null,
     Object? selectedValue = null,
     Object? status = null,
     Object? locationServiceEnabled = null,
@@ -676,6 +685,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? mapController = freezed,
   }) {
     return _then(_$HomeStateImpl(
+      reverceModelDataResponce: null == reverceModelDataResponce
+          ? _value.reverceModelDataResponce
+          : reverceModelDataResponce // ignore: cast_nullable_to_non_nullable
+              as Reverce,
       selectedValue: null == selectedValue
           ? _value.selectedValue
           : selectedValue // ignore: cast_nullable_to_non_nullable
@@ -704,12 +717,16 @@ class __$$HomeStateImplCopyWithImpl<$Res>
 
 class _$HomeStateImpl implements _HomeState {
   const _$HomeStateImpl(
-      {this.selectedValue = "",
+      {this.reverceModelDataResponce = const Reverce(),
+      this.selectedValue = "",
       this.status = HomeStatus.initial,
       this.locationServiceEnabled = false,
       this.permissionGranted = false,
       this.mapController});
 
+  @override
+  @JsonKey()
+  final Reverce reverceModelDataResponce;
   @override
   @JsonKey()
   final String selectedValue;
@@ -727,7 +744,7 @@ class _$HomeStateImpl implements _HomeState {
 
   @override
   String toString() {
-    return 'HomeState(selectedValue: $selectedValue, status: $status, locationServiceEnabled: $locationServiceEnabled, permissionGranted: $permissionGranted, mapController: $mapController)';
+    return 'HomeState(reverceModelDataResponce: $reverceModelDataResponce, selectedValue: $selectedValue, status: $status, locationServiceEnabled: $locationServiceEnabled, permissionGranted: $permissionGranted, mapController: $mapController)';
   }
 
   @override
@@ -735,6 +752,9 @@ class _$HomeStateImpl implements _HomeState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeStateImpl &&
+            (identical(
+                    other.reverceModelDataResponce, reverceModelDataResponce) ||
+                other.reverceModelDataResponce == reverceModelDataResponce) &&
             (identical(other.selectedValue, selectedValue) ||
                 other.selectedValue == selectedValue) &&
             (identical(other.status, status) || other.status == status) &&
@@ -747,8 +767,14 @@ class _$HomeStateImpl implements _HomeState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, selectedValue, status,
-      locationServiceEnabled, permissionGranted, mapController);
+  int get hashCode => Object.hash(
+      runtimeType,
+      reverceModelDataResponce,
+      selectedValue,
+      status,
+      locationServiceEnabled,
+      permissionGranted,
+      mapController);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -761,12 +787,15 @@ class _$HomeStateImpl implements _HomeState {
 
 abstract class _HomeState implements HomeState {
   const factory _HomeState(
-      {final String selectedValue,
+      {final Reverce reverceModelDataResponce,
+      final String selectedValue,
       final HomeStatus status,
       final bool locationServiceEnabled,
       final bool permissionGranted,
       final maplibre.MapLibreMapController? mapController}) = _$HomeStateImpl;
 
+  @override
+  Reverce get reverceModelDataResponce;
   @override
   String get selectedValue;
   @override
