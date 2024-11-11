@@ -76,3 +76,5 @@ flutter:
     - assets/images/
     - assets/svgImages/
     - assets/
+    - assets/images/current_location.png
+    - assets/images/source_location.png

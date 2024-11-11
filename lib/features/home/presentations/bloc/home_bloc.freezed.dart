@@ -22,6 +22,9 @@ mixin _$HomeEvent {
     required TResult Function() mapInitialized,
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function() addCurrentLocationMarker,
+    required TResult Function() drawPolylineToDataLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$HomeEvent {
     TResult? Function()? mapInitialized,
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function()? addCurrentLocationMarker,
+    TResult? Function()? drawPolylineToDataLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$HomeEvent {
     TResult Function()? mapInitialized,
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function()? addCurrentLocationMarker,
+    TResult Function()? drawPolylineToDataLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +57,12 @@ mixin _$HomeEvent {
     required TResult Function(_LocationServiceChecked value)
         locationServiceChecked,
     required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +71,12 @@ mixin _$HomeEvent {
     TResult? Function(_MapInitialized value)? mapInitialized,
     TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +85,10 @@ mixin _$HomeEvent {
     TResult Function(_MapInitialized value)? mapInitialized,
     TResult Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +159,9 @@ class _$DataLoadedImpl implements _DataLoaded {
     required TResult Function() mapInitialized,
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function() addCurrentLocationMarker,
+    required TResult Function() drawPolylineToDataLocation,
   }) {
     return dataLoaded();
   }
@@ -145,6 +173,9 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult? Function()? mapInitialized,
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function()? addCurrentLocationMarker,
+    TResult? Function()? drawPolylineToDataLocation,
   }) {
     return dataLoaded?.call();
   }
@@ -156,6 +187,9 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult Function()? mapInitialized,
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function()? addCurrentLocationMarker,
+    TResult Function()? drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (dataLoaded != null) {
@@ -172,6 +206,12 @@ class _$DataLoadedImpl implements _DataLoaded {
     required TResult Function(_LocationServiceChecked value)
         locationServiceChecked,
     required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
   }) {
     return dataLoaded(this);
   }
@@ -183,6 +223,12 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult? Function(_MapInitialized value)? mapInitialized,
     TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
   }) {
     return dataLoaded?.call(this);
   }
@@ -194,6 +240,10 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult Function(_MapInitialized value)? mapInitialized,
     TResult Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (dataLoaded != null) {
@@ -252,6 +302,9 @@ class _$MapInitializedImpl implements _MapInitialized {
     required TResult Function() mapInitialized,
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function() addCurrentLocationMarker,
+    required TResult Function() drawPolylineToDataLocation,
   }) {
     return mapInitialized();
   }
@@ -263,6 +316,9 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult? Function()? mapInitialized,
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function()? addCurrentLocationMarker,
+    TResult? Function()? drawPolylineToDataLocation,
   }) {
     return mapInitialized?.call();
   }
@@ -274,6 +330,9 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult Function()? mapInitialized,
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function()? addCurrentLocationMarker,
+    TResult Function()? drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (mapInitialized != null) {
@@ -290,6 +349,12 @@ class _$MapInitializedImpl implements _MapInitialized {
     required TResult Function(_LocationServiceChecked value)
         locationServiceChecked,
     required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
   }) {
     return mapInitialized(this);
   }
@@ -301,6 +366,12 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult? Function(_MapInitialized value)? mapInitialized,
     TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
   }) {
     return mapInitialized?.call(this);
   }
@@ -312,6 +383,10 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult Function(_MapInitialized value)? mapInitialized,
     TResult Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (mapInitialized != null) {
@@ -373,6 +448,9 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     required TResult Function() mapInitialized,
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function() addCurrentLocationMarker,
+    required TResult Function() drawPolylineToDataLocation,
   }) {
     return locationServiceChecked();
   }
@@ -384,6 +462,9 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult? Function()? mapInitialized,
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function()? addCurrentLocationMarker,
+    TResult? Function()? drawPolylineToDataLocation,
   }) {
     return locationServiceChecked?.call();
   }
@@ -395,6 +476,9 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult Function()? mapInitialized,
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function()? addCurrentLocationMarker,
+    TResult Function()? drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (locationServiceChecked != null) {
@@ -411,6 +495,12 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     required TResult Function(_LocationServiceChecked value)
         locationServiceChecked,
     required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
   }) {
     return locationServiceChecked(this);
   }
@@ -422,6 +512,12 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult? Function(_MapInitialized value)? mapInitialized,
     TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
   }) {
     return locationServiceChecked?.call(this);
   }
@@ -433,6 +529,10 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult Function(_MapInitialized value)? mapInitialized,
     TResult Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (locationServiceChecked != null) {
@@ -492,6 +592,9 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     required TResult Function() mapInitialized,
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function() addCurrentLocationMarker,
+    required TResult Function() drawPolylineToDataLocation,
   }) {
     return permissionRequested();
   }
@@ -503,6 +606,9 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult? Function()? mapInitialized,
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function()? addCurrentLocationMarker,
+    TResult? Function()? drawPolylineToDataLocation,
   }) {
     return permissionRequested?.call();
   }
@@ -514,6 +620,9 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult Function()? mapInitialized,
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function()? addCurrentLocationMarker,
+    TResult Function()? drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (permissionRequested != null) {
@@ -530,6 +639,12 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     required TResult Function(_LocationServiceChecked value)
         locationServiceChecked,
     required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
   }) {
     return permissionRequested(this);
   }
@@ -541,6 +656,12 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult? Function(_MapInitialized value)? mapInitialized,
     TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
   }) {
     return permissionRequested?.call(this);
   }
@@ -552,6 +673,10 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult Function(_MapInitialized value)? mapInitialized,
     TResult Function(_LocationServiceChecked value)? locationServiceChecked,
     TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (permissionRequested != null) {
@@ -566,6 +691,445 @@ abstract class _PermissionRequested implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$CurrentLocationRequestedImplCopyWith<$Res> {
+  factory _$$CurrentLocationRequestedImplCopyWith(
+          _$CurrentLocationRequestedImpl value,
+          $Res Function(_$CurrentLocationRequestedImpl) then) =
+      __$$CurrentLocationRequestedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CurrentLocationRequestedImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$CurrentLocationRequestedImpl>
+    implements _$$CurrentLocationRequestedImplCopyWith<$Res> {
+  __$$CurrentLocationRequestedImplCopyWithImpl(
+      _$CurrentLocationRequestedImpl _value,
+      $Res Function(_$CurrentLocationRequestedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
+  const _$CurrentLocationRequestedImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.currentLocationRequested()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CurrentLocationRequestedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() dataLoaded,
+    required TResult Function() mapInitialized,
+    required TResult Function() locationServiceChecked,
+    required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function() addCurrentLocationMarker,
+    required TResult Function() drawPolylineToDataLocation,
+  }) {
+    return currentLocationRequested();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? dataLoaded,
+    TResult? Function()? mapInitialized,
+    TResult? Function()? locationServiceChecked,
+    TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function()? addCurrentLocationMarker,
+    TResult? Function()? drawPolylineToDataLocation,
+  }) {
+    return currentLocationRequested?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dataLoaded,
+    TResult Function()? mapInitialized,
+    TResult Function()? locationServiceChecked,
+    TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function()? addCurrentLocationMarker,
+    TResult Function()? drawPolylineToDataLocation,
+    required TResult orElse(),
+  }) {
+    if (currentLocationRequested != null) {
+      return currentLocationRequested();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DataLoaded value) dataLoaded,
+    required TResult Function(_MapInitialized value) mapInitialized,
+    required TResult Function(_LocationServiceChecked value)
+        locationServiceChecked,
+    required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
+  }) {
+    return currentLocationRequested(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DataLoaded value)? dataLoaded,
+    TResult? Function(_MapInitialized value)? mapInitialized,
+    TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+  }) {
+    return currentLocationRequested?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DataLoaded value)? dataLoaded,
+    TResult Function(_MapInitialized value)? mapInitialized,
+    TResult Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+    required TResult orElse(),
+  }) {
+    if (currentLocationRequested != null) {
+      return currentLocationRequested(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CurrentLocationRequested implements HomeEvent {
+  const factory _CurrentLocationRequested() = _$CurrentLocationRequestedImpl;
+}
+
+/// @nodoc
+abstract class _$$AddCurrentLocationMarkerImplCopyWith<$Res> {
+  factory _$$AddCurrentLocationMarkerImplCopyWith(
+          _$AddCurrentLocationMarkerImpl value,
+          $Res Function(_$AddCurrentLocationMarkerImpl) then) =
+      __$$AddCurrentLocationMarkerImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddCurrentLocationMarkerImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$AddCurrentLocationMarkerImpl>
+    implements _$$AddCurrentLocationMarkerImplCopyWith<$Res> {
+  __$$AddCurrentLocationMarkerImplCopyWithImpl(
+      _$AddCurrentLocationMarkerImpl _value,
+      $Res Function(_$AddCurrentLocationMarkerImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
+  const _$AddCurrentLocationMarkerImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.addCurrentLocationMarker()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddCurrentLocationMarkerImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() dataLoaded,
+    required TResult Function() mapInitialized,
+    required TResult Function() locationServiceChecked,
+    required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function() addCurrentLocationMarker,
+    required TResult Function() drawPolylineToDataLocation,
+  }) {
+    return addCurrentLocationMarker();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? dataLoaded,
+    TResult? Function()? mapInitialized,
+    TResult? Function()? locationServiceChecked,
+    TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function()? addCurrentLocationMarker,
+    TResult? Function()? drawPolylineToDataLocation,
+  }) {
+    return addCurrentLocationMarker?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dataLoaded,
+    TResult Function()? mapInitialized,
+    TResult Function()? locationServiceChecked,
+    TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function()? addCurrentLocationMarker,
+    TResult Function()? drawPolylineToDataLocation,
+    required TResult orElse(),
+  }) {
+    if (addCurrentLocationMarker != null) {
+      return addCurrentLocationMarker();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DataLoaded value) dataLoaded,
+    required TResult Function(_MapInitialized value) mapInitialized,
+    required TResult Function(_LocationServiceChecked value)
+        locationServiceChecked,
+    required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
+  }) {
+    return addCurrentLocationMarker(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DataLoaded value)? dataLoaded,
+    TResult? Function(_MapInitialized value)? mapInitialized,
+    TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+  }) {
+    return addCurrentLocationMarker?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DataLoaded value)? dataLoaded,
+    TResult Function(_MapInitialized value)? mapInitialized,
+    TResult Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+    required TResult orElse(),
+  }) {
+    if (addCurrentLocationMarker != null) {
+      return addCurrentLocationMarker(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddCurrentLocationMarker implements HomeEvent {
+  const factory _AddCurrentLocationMarker() = _$AddCurrentLocationMarkerImpl;
+}
+
+/// @nodoc
+abstract class _$$DrawPolylineToDataLocationImplCopyWith<$Res> {
+  factory _$$DrawPolylineToDataLocationImplCopyWith(
+          _$DrawPolylineToDataLocationImpl value,
+          $Res Function(_$DrawPolylineToDataLocationImpl) then) =
+      __$$DrawPolylineToDataLocationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DrawPolylineToDataLocationImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$DrawPolylineToDataLocationImpl>
+    implements _$$DrawPolylineToDataLocationImplCopyWith<$Res> {
+  __$$DrawPolylineToDataLocationImplCopyWithImpl(
+      _$DrawPolylineToDataLocationImpl _value,
+      $Res Function(_$DrawPolylineToDataLocationImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
+  const _$DrawPolylineToDataLocationImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.drawPolylineToDataLocation()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DrawPolylineToDataLocationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() dataLoaded,
+    required TResult Function() mapInitialized,
+    required TResult Function() locationServiceChecked,
+    required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function() addCurrentLocationMarker,
+    required TResult Function() drawPolylineToDataLocation,
+  }) {
+    return drawPolylineToDataLocation();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? dataLoaded,
+    TResult? Function()? mapInitialized,
+    TResult? Function()? locationServiceChecked,
+    TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function()? addCurrentLocationMarker,
+    TResult? Function()? drawPolylineToDataLocation,
+  }) {
+    return drawPolylineToDataLocation?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dataLoaded,
+    TResult Function()? mapInitialized,
+    TResult Function()? locationServiceChecked,
+    TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function()? addCurrentLocationMarker,
+    TResult Function()? drawPolylineToDataLocation,
+    required TResult orElse(),
+  }) {
+    if (drawPolylineToDataLocation != null) {
+      return drawPolylineToDataLocation();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DataLoaded value) dataLoaded,
+    required TResult Function(_MapInitialized value) mapInitialized,
+    required TResult Function(_LocationServiceChecked value)
+        locationServiceChecked,
+    required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
+  }) {
+    return drawPolylineToDataLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DataLoaded value)? dataLoaded,
+    TResult? Function(_MapInitialized value)? mapInitialized,
+    TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+  }) {
+    return drawPolylineToDataLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DataLoaded value)? dataLoaded,
+    TResult Function(_MapInitialized value)? mapInitialized,
+    TResult Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+    required TResult orElse(),
+  }) {
+    if (drawPolylineToDataLocation != null) {
+      return drawPolylineToDataLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DrawPolylineToDataLocation implements HomeEvent {
+  const factory _DrawPolylineToDataLocation() =
+      _$DrawPolylineToDataLocationImpl;
+}
+
+/// @nodoc
 mixin _$HomeState {
   Reverce get reverceModelDataResponce => throw _privateConstructorUsedError;
   String get selectedValue => throw _privateConstructorUsedError;
@@ -574,6 +1138,8 @@ mixin _$HomeState {
   bool get permissionGranted => throw _privateConstructorUsedError;
   maplibre.MapLibreMapController? get mapController =>
       throw _privateConstructorUsedError;
+  maplibre.LatLng? get currentLocation => throw _privateConstructorUsedError;
+  maplibre.LatLng? get dataLocation => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -593,7 +1159,9 @@ abstract class $HomeStateCopyWith<$Res> {
       HomeStatus status,
       bool locationServiceEnabled,
       bool permissionGranted,
-      maplibre.MapLibreMapController? mapController});
+      maplibre.MapLibreMapController? mapController,
+      maplibre.LatLng? currentLocation,
+      maplibre.LatLng? dataLocation});
 }
 
 /// @nodoc
@@ -617,6 +1185,8 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? locationServiceEnabled = null,
     Object? permissionGranted = null,
     Object? mapController = freezed,
+    Object? currentLocation = freezed,
+    Object? dataLocation = freezed,
   }) {
     return _then(_value.copyWith(
       reverceModelDataResponce: null == reverceModelDataResponce
@@ -643,6 +1213,14 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.mapController
           : mapController // ignore: cast_nullable_to_non_nullable
               as maplibre.MapLibreMapController?,
+      currentLocation: freezed == currentLocation
+          ? _value.currentLocation
+          : currentLocation // ignore: cast_nullable_to_non_nullable
+              as maplibre.LatLng?,
+      dataLocation: freezed == dataLocation
+          ? _value.dataLocation
+          : dataLocation // ignore: cast_nullable_to_non_nullable
+              as maplibre.LatLng?,
     ) as $Val);
   }
 }
@@ -661,7 +1239,9 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       HomeStatus status,
       bool locationServiceEnabled,
       bool permissionGranted,
-      maplibre.MapLibreMapController? mapController});
+      maplibre.MapLibreMapController? mapController,
+      maplibre.LatLng? currentLocation,
+      maplibre.LatLng? dataLocation});
 }
 
 /// @nodoc
@@ -683,6 +1263,8 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? locationServiceEnabled = null,
     Object? permissionGranted = null,
     Object? mapController = freezed,
+    Object? currentLocation = freezed,
+    Object? dataLocation = freezed,
   }) {
     return _then(_$HomeStateImpl(
       reverceModelDataResponce: null == reverceModelDataResponce
@@ -709,6 +1291,14 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.mapController
           : mapController // ignore: cast_nullable_to_non_nullable
               as maplibre.MapLibreMapController?,
+      currentLocation: freezed == currentLocation
+          ? _value.currentLocation
+          : currentLocation // ignore: cast_nullable_to_non_nullable
+              as maplibre.LatLng?,
+      dataLocation: freezed == dataLocation
+          ? _value.dataLocation
+          : dataLocation // ignore: cast_nullable_to_non_nullable
+              as maplibre.LatLng?,
     ));
   }
 }
@@ -722,7 +1312,9 @@ class _$HomeStateImpl implements _HomeState {
       this.status = HomeStatus.initial,
       this.locationServiceEnabled = false,
       this.permissionGranted = false,
-      this.mapController});
+      this.mapController,
+      this.currentLocation,
+      this.dataLocation});
 
   @override
   @JsonKey()
@@ -741,10 +1333,14 @@ class _$HomeStateImpl implements _HomeState {
   final bool permissionGranted;
   @override
   final maplibre.MapLibreMapController? mapController;
+  @override
+  final maplibre.LatLng? currentLocation;
+  @override
+  final maplibre.LatLng? dataLocation;
 
   @override
   String toString() {
-    return 'HomeState(reverceModelDataResponce: $reverceModelDataResponce, selectedValue: $selectedValue, status: $status, locationServiceEnabled: $locationServiceEnabled, permissionGranted: $permissionGranted, mapController: $mapController)';
+    return 'HomeState(reverceModelDataResponce: $reverceModelDataResponce, selectedValue: $selectedValue, status: $status, locationServiceEnabled: $locationServiceEnabled, permissionGranted: $permissionGranted, mapController: $mapController, currentLocation: $currentLocation, dataLocation: $dataLocation)';
   }
 
   @override
@@ -763,7 +1359,11 @@ class _$HomeStateImpl implements _HomeState {
             (identical(other.permissionGranted, permissionGranted) ||
                 other.permissionGranted == permissionGranted) &&
             (identical(other.mapController, mapController) ||
-                other.mapController == mapController));
+                other.mapController == mapController) &&
+            (identical(other.currentLocation, currentLocation) ||
+                other.currentLocation == currentLocation) &&
+            (identical(other.dataLocation, dataLocation) ||
+                other.dataLocation == dataLocation));
   }
 
   @override
@@ -774,7 +1374,9 @@ class _$HomeStateImpl implements _HomeState {
       status,
       locationServiceEnabled,
       permissionGranted,
-      mapController);
+      mapController,
+      currentLocation,
+      dataLocation);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -792,7 +1394,9 @@ abstract class _HomeState implements HomeState {
       final HomeStatus status,
       final bool locationServiceEnabled,
       final bool permissionGranted,
-      final maplibre.MapLibreMapController? mapController}) = _$HomeStateImpl;
+      final maplibre.MapLibreMapController? mapController,
+      final maplibre.LatLng? currentLocation,
+      final maplibre.LatLng? dataLocation}) = _$HomeStateImpl;
 
   @override
   Reverce get reverceModelDataResponce;
@@ -806,6 +1410,10 @@ abstract class _HomeState implements HomeState {
   bool get permissionGranted;
   @override
   maplibre.MapLibreMapController? get mapController;
+  @override
+  maplibre.LatLng? get currentLocation;
+  @override
+  maplibre.LatLng? get dataLocation;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.

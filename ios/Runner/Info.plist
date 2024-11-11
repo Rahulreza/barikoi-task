@@ -28,6 +28,10 @@
 		<string>LaunchScreen</string>
 		<key>NSLocationWhenInUseUsageDescription</key>
         <string>This app needs access to location</string>
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string>We need your location to display map data</string>
+        <key>NSLocationAlwaysUsageDescription</key>
+        <string>We need your location to display map data</string>
 		<key>UIMainStoryboardFile</key>
 		<string>Main</string>
 		<key>UISupportedInterfaceOrientations</key>
