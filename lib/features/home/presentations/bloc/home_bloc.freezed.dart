@@ -25,6 +25,9 @@ mixin _$HomeEvent {
     required TResult Function() currentLocationRequested,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
   }) =>
@@ -38,6 +41,9 @@ mixin _$HomeEvent {
     TResult? Function()? currentLocationRequested,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
   }) =>
@@ -51,6 +57,9 @@ mixin _$HomeEvent {
     TResult Function()? currentLocationRequested,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -67,6 +76,8 @@ mixin _$HomeEvent {
         currentLocationRequested,
     required TResult Function(_AddCurrentLocationMarker value)
         addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
   }) =>
@@ -81,6 +92,8 @@ mixin _$HomeEvent {
         currentLocationRequested,
     TResult? Function(_AddCurrentLocationMarker value)?
         addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
   }) =>
@@ -93,6 +106,8 @@ mixin _$HomeEvent {
     TResult Function(_PermissionRequested value)? permissionRequested,
     TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
     TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -168,6 +183,9 @@ class _$DataLoadedImpl implements _DataLoaded {
     required TResult Function() currentLocationRequested,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
   }) {
@@ -184,6 +202,9 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult? Function()? currentLocationRequested,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
   }) {
@@ -200,6 +221,9 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult Function()? currentLocationRequested,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -222,6 +246,8 @@ class _$DataLoadedImpl implements _DataLoaded {
         currentLocationRequested,
     required TResult Function(_AddCurrentLocationMarker value)
         addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
   }) {
@@ -239,6 +265,8 @@ class _$DataLoadedImpl implements _DataLoaded {
         currentLocationRequested,
     TResult? Function(_AddCurrentLocationMarker value)?
         addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
   }) {
@@ -254,6 +282,8 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult Function(_PermissionRequested value)? permissionRequested,
     TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
     TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -317,6 +347,9 @@ class _$MapInitializedImpl implements _MapInitialized {
     required TResult Function() currentLocationRequested,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
   }) {
@@ -333,6 +366,9 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult? Function()? currentLocationRequested,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
   }) {
@@ -349,6 +385,9 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult Function()? currentLocationRequested,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -371,6 +410,8 @@ class _$MapInitializedImpl implements _MapInitialized {
         currentLocationRequested,
     required TResult Function(_AddCurrentLocationMarker value)
         addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
   }) {
@@ -388,6 +429,8 @@ class _$MapInitializedImpl implements _MapInitialized {
         currentLocationRequested,
     TResult? Function(_AddCurrentLocationMarker value)?
         addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
   }) {
@@ -403,6 +446,8 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult Function(_PermissionRequested value)? permissionRequested,
     TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
     TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -469,6 +514,9 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     required TResult Function() currentLocationRequested,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
   }) {
@@ -485,6 +533,9 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult? Function()? currentLocationRequested,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
   }) {
@@ -501,6 +552,9 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult Function()? currentLocationRequested,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -523,6 +577,8 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
         currentLocationRequested,
     required TResult Function(_AddCurrentLocationMarker value)
         addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
   }) {
@@ -540,6 +596,8 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
         currentLocationRequested,
     TResult? Function(_AddCurrentLocationMarker value)?
         addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
   }) {
@@ -555,6 +613,8 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult Function(_PermissionRequested value)? permissionRequested,
     TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
     TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -619,6 +679,9 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     required TResult Function() currentLocationRequested,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
   }) {
@@ -635,6 +698,9 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult? Function()? currentLocationRequested,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
   }) {
@@ -651,6 +717,9 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult Function()? currentLocationRequested,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -673,6 +742,8 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
         currentLocationRequested,
     required TResult Function(_AddCurrentLocationMarker value)
         addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
   }) {
@@ -690,6 +761,8 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
         currentLocationRequested,
     TResult? Function(_AddCurrentLocationMarker value)?
         addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
   }) {
@@ -705,6 +778,8 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult Function(_PermissionRequested value)? permissionRequested,
     TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
     TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -771,6 +846,9 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
     required TResult Function() currentLocationRequested,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
   }) {
@@ -787,6 +865,9 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
     TResult? Function()? currentLocationRequested,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
   }) {
@@ -803,6 +884,9 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
     TResult Function()? currentLocationRequested,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -825,6 +909,8 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
         currentLocationRequested,
     required TResult Function(_AddCurrentLocationMarker value)
         addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
   }) {
@@ -842,6 +928,8 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
         currentLocationRequested,
     TResult? Function(_AddCurrentLocationMarker value)?
         addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
   }) {
@@ -857,6 +945,8 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
     TResult Function(_PermissionRequested value)? permissionRequested,
     TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
     TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -951,6 +1041,9 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
     required TResult Function() currentLocationRequested,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
   }) {
@@ -967,6 +1060,9 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
     TResult? Function()? currentLocationRequested,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
   }) {
@@ -983,6 +1079,9 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
     TResult Function()? currentLocationRequested,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -1005,6 +1104,8 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
         currentLocationRequested,
     required TResult Function(_AddCurrentLocationMarker value)
         addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
   }) {
@@ -1022,6 +1123,8 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
         currentLocationRequested,
     TResult? Function(_AddCurrentLocationMarker value)?
         addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
   }) {
@@ -1037,6 +1140,8 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
     TResult Function(_PermissionRequested value)? permissionRequested,
     TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
     TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -1059,6 +1164,226 @@ abstract class _AddCurrentLocationMarker implements HomeEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddCurrentLocationMarkerImplCopyWith<_$AddCurrentLocationMarkerImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddDestinationLocationMarkerImplCopyWith<$Res> {
+  factory _$$AddDestinationLocationMarkerImplCopyWith(
+          _$AddDestinationLocationMarkerImpl value,
+          $Res Function(_$AddDestinationLocationMarkerImpl) then) =
+      __$$AddDestinationLocationMarkerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {maplibre.MapLibreMapController mapLibController, BuildContext context});
+}
+
+/// @nodoc
+class __$$AddDestinationLocationMarkerImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$AddDestinationLocationMarkerImpl>
+    implements _$$AddDestinationLocationMarkerImplCopyWith<$Res> {
+  __$$AddDestinationLocationMarkerImplCopyWithImpl(
+      _$AddDestinationLocationMarkerImpl _value,
+      $Res Function(_$AddDestinationLocationMarkerImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? mapLibController = null,
+    Object? context = null,
+  }) {
+    return _then(_$AddDestinationLocationMarkerImpl(
+      mapLibController: null == mapLibController
+          ? _value.mapLibController
+          : mapLibController // ignore: cast_nullable_to_non_nullable
+              as maplibre.MapLibreMapController,
+      context: null == context
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddDestinationLocationMarkerImpl
+    implements _AddDestinationLocationMarker {
+  _$AddDestinationLocationMarkerImpl(
+      {required this.mapLibController, required this.context});
+
+  @override
+  final maplibre.MapLibreMapController mapLibController;
+  @override
+  final BuildContext context;
+
+  @override
+  String toString() {
+    return 'HomeEvent.addDestinationLocationMarker(mapLibController: $mapLibController, context: $context)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddDestinationLocationMarkerImpl &&
+            (identical(other.mapLibController, mapLibController) ||
+                other.mapLibController == mapLibController) &&
+            (identical(other.context, context) || other.context == context));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, mapLibController, context);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddDestinationLocationMarkerImplCopyWith<
+          _$AddDestinationLocationMarkerImpl>
+      get copyWith => __$$AddDestinationLocationMarkerImplCopyWithImpl<
+          _$AddDestinationLocationMarkerImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() dataLoaded,
+    required TResult Function() mapInitialized,
+    required TResult Function() locationServiceChecked,
+    required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
+  }) {
+    return addDestinationLocationMarker(mapLibController, context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? dataLoaded,
+    TResult? Function()? mapInitialized,
+    TResult? Function()? locationServiceChecked,
+    TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
+  }) {
+    return addDestinationLocationMarker?.call(mapLibController, context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dataLoaded,
+    TResult Function()? mapInitialized,
+    TResult Function()? locationServiceChecked,
+    TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
+    required TResult orElse(),
+  }) {
+    if (addDestinationLocationMarker != null) {
+      return addDestinationLocationMarker(mapLibController, context);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DataLoaded value) dataLoaded,
+    required TResult Function(_MapInitialized value) mapInitialized,
+    required TResult Function(_LocationServiceChecked value)
+        locationServiceChecked,
+    required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
+  }) {
+    return addDestinationLocationMarker(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DataLoaded value)? dataLoaded,
+    TResult? Function(_MapInitialized value)? mapInitialized,
+    TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+  }) {
+    return addDestinationLocationMarker?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DataLoaded value)? dataLoaded,
+    TResult Function(_MapInitialized value)? mapInitialized,
+    TResult Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+    required TResult orElse(),
+  }) {
+    if (addDestinationLocationMarker != null) {
+      return addDestinationLocationMarker(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AddDestinationLocationMarker implements HomeEvent {
+  factory _AddDestinationLocationMarker(
+          {required final maplibre.MapLibreMapController mapLibController,
+          required final BuildContext context}) =
+      _$AddDestinationLocationMarkerImpl;
+
+  maplibre.MapLibreMapController get mapLibController;
+  BuildContext get context;
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddDestinationLocationMarkerImplCopyWith<
+          _$AddDestinationLocationMarkerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1141,6 +1466,9 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
     required TResult Function() currentLocationRequested,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
   }) {
@@ -1157,6 +1485,9 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
     TResult? Function()? currentLocationRequested,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
   }) {
@@ -1173,6 +1504,9 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
     TResult Function()? currentLocationRequested,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
     required TResult orElse(),
@@ -1195,6 +1529,8 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
         currentLocationRequested,
     required TResult Function(_AddCurrentLocationMarker value)
         addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
   }) {
@@ -1212,6 +1548,8 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
         currentLocationRequested,
     TResult? Function(_AddCurrentLocationMarker value)?
         addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
   }) {
@@ -1227,6 +1565,8 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
     TResult Function(_PermissionRequested value)? permissionRequested,
     TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
     TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
     required TResult orElse(),

@@ -1,7 +1,6 @@
 import 'package:barikoi/features/core/path/file_path.dart';
 import 'package:maplibre_gl/maplibre_gl.dart' as maplibre;
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -23,7 +22,6 @@ class _HomePageState extends State<HomePage> {
     homeBloc.add(const HomeEvent.mapInitialized());
     homeBloc.add(const HomeEvent.currentLocationRequested());
     homeBloc.add(const HomeEvent.dataLoaded());
-
   }
 
   Future<void> _refresh() async {
@@ -32,7 +30,6 @@ class _HomePageState extends State<HomePage> {
     homeBloc.add(const HomeEvent.mapInitialized());
     homeBloc.add(const HomeEvent.currentLocationRequested());
     homeBloc.add(const HomeEvent.dataLoaded());
-
   }
 
   Future<void> _showLocationDialog(BuildContext context,
@@ -78,7 +75,8 @@ class _HomePageState extends State<HomePage> {
               if (!state.locationServiceEnabled) {
                 _showLocationDialog(context, serviceEnabled: false);
               } else if (!state.permissionGranted) {
-                _showLocationDialog(context, serviceEnabled: true, permissionDenied: true);
+                _showLocationDialog(context,
+                    serviceEnabled: true, permissionDenied: true);
               }
 
               if (state.status == HomeStatus.initial) {
@@ -93,13 +91,17 @@ class _HomePageState extends State<HomePage> {
                     target: initialCameraPosition,
                     zoom: 12,
                   ),
-                  onMapCreated: (controller) async{
+                  onMapCreated: (controller) async {
                     mController = controller;
                     homeBloc.add(const HomeEvent.mapInitialized());
                     await Future.delayed(Duration(milliseconds: 500));
-                    homeBloc.add( HomeEvent.addCurrentLocationMarker(mapLibController: mController));
-                    },
-                  styleString: 'https://map.barikoi.com/styles/osm-liberty/style.json?key=bkoi_5bacf61a76e5047364b3540a662f1ee5865f03ef8736d7475f18538c3fb52a8e',
+                    homeBloc.add(HomeEvent.addCurrentLocationMarker(
+                        mapLibController: mController));
+                    homeBloc.add(HomeEvent.addDestinationLocationMarker(
+                        mapLibController: mController, context: context));
+                  },
+                  styleString:
+                      'https://map.barikoi.com/styles/osm-liberty/style.json?key=bkoi_5bacf61a76e5047364b3540a662f1ee5865f03ef8736d7475f18538c3fb52a8e',
                 );
               }
             },

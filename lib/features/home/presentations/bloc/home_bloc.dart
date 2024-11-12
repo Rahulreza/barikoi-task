@@ -1,5 +1,5 @@
 import 'package:barikoi/features/core/path/file_path.dart';
-import 'package:barikoi/features/core/path/image_path.dart';
+
 import 'package:geolocator/geolocator.dart';
 import 'package:maplibre_gl/maplibre_gl.dart' as maplibre;
 
@@ -26,31 +26,24 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
             await _addCurrentLocationMarker(event, emit),
         drawPolylineToDataLocation: (event) async =>
             await _drawPolylineToDataLocation(event, emit),
+        addDestinationLocationMarker: (event) async =>
+            await _addDestinationLocationMarker(event, emit),
       );
     });
   }
-  _dataLoaded(_DataLoaded event, Emitter<HomeState> emit) async {
+  Future<void> _dataLoaded(_DataLoaded event, Emitter<HomeState> emit) async {
     emit(state.copyWith(status: HomeStatus.initial));
-    if (kDebugMode) {
-      print("I am from home bloc before try");
-    }
     try {
-      if (kDebugMode) {
-        print("I am from home bloc after try");
-      }
       final reverceGeocodingDataResponse =
           await homeRepository.reverceGeoCodingMapDataSubmit();
       final placeLocation =
           maplibre.LatLng(23.823862245054432, 90.36452020536662);
+
       emit(state.copyWith(
         reverceModelDataResponce: reverceGeocodingDataResponse,
         dataLocation: placeLocation,
         status: HomeStatus.success,
       ));
-      if (kDebugMode) {
-        print(
-            "I am from home bloc reverceGeocodingDataResponse: $reverceGeocodingDataResponse");
-      }
     } catch (e) {
       emit(state.copyWith(status: HomeStatus.failure));
     }
@@ -140,13 +133,52 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       if (kDebugMode) {
         print("Current Location Marker Added!");
       }
-    } catch (e) {
+      // Trigger polyline drawing if both locations are set
+      add(HomeEvent.drawPolylineToDataLocation(mapLibController: event.mapLibController));
+        } catch (e) {
       if (kDebugMode) {
         print("AddCurrent Location Error: $e");
       }
     }
   }
 
+  Future<void> _addDestinationLocationMarker(
+      _AddDestinationLocationMarker event, Emitter<HomeState> emit) async {
+    try {
+      await event.mapLibController.addSymbol(
+        maplibre.SymbolOptions(
+          geometry: state.dataLocation,
+          iconImage:
+              "assets/images/source_location.png",
+          iconSize: 0.2,
+        ),
+      );
+      emit(state.copyWith(status: HomeStatus.success));
+      if (kDebugMode) {
+        print("Destination Location Marker Added!");
+      }
+      // Trigger polyline drawing if both locations are set
+      add(HomeEvent.drawPolylineToDataLocation(mapLibController: event.mapLibController));
+
+      // Set up the symbol tap listener to open the dialog
+      event.mapLibController.onSymbolTapped.add((symbol) {
+        if (kDebugMode) {
+          print("Clicked to show dialog in bloc");
+        }
+        showDialog(
+          context: event.context,
+          builder: (context) => AlertDialog(
+            title: Text('Marker Details'),
+            content: Text('Location: ${state.reverceModelDataResponce.place}'),
+          ),
+        );
+      });
+        } catch (e) {
+      if (kDebugMode) {
+        print("Add Destination Location Error: $e");
+      }
+    }
+  }
 
   Future<void> _drawPolylineToDataLocation(
       _DrawPolylineToDataLocation event, Emitter<HomeState> emit) async {
@@ -163,19 +195,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         lineWidth: 4.0,
       ),
     );
-
-    await event.mapLibController.addSymbol(
-      maplibre.SymbolOptions(
-        geometry: state.dataLocation,
-        iconImage: LocationIcon.sourceLocationIcon,
-        iconSize: 0.5,
-      ),
-    );
-
     emit(state.copyWith(status: HomeStatus.success));
 
     if (kDebugMode) {
       print("Polyline drawn and symbol added at data location");
     }
-    }
+  }
 }

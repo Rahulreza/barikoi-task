@@ -17,3 +17,4 @@ export 'package:barikoi/features/home/data/models/reverce/reverce.geocoding.mode
 export 'dart:convert';
 export 'package:flutter/foundation.dart';
 export 'dart:async';
+export 'package:barikoi/features/home/presentations/widgets/show_destination_indetails.dart';
