@@ -10,7 +10,7 @@ class HomeState with _$HomeState {
     @Default(HomeStatus.initial) HomeStatus status,
     @Default(false) bool locationServiceEnabled,
     @Default(false) bool permissionGranted,
-    maplibre.MapLibreMapController mapController,
+   // maplibre.MapLibreMapController mapController,
     @Default(maplibre.LatLng( 23.823862245054432, 90.36452020536662)) maplibre.LatLng currentLocation,
     @Default(maplibre.LatLng( 23.823862245054432, 90.36452020536662)) maplibre.LatLng dataLocation,
   }) = _HomeState;

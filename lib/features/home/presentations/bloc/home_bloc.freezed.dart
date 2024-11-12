@@ -23,8 +23,10 @@ mixin _$HomeEvent {
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
     required TResult Function() currentLocationRequested,
-    required TResult Function() addCurrentLocationMarker,
-    required TResult Function() drawPolylineToDataLocation,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,8 +36,10 @@ mixin _$HomeEvent {
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
     TResult? Function()? currentLocationRequested,
-    TResult? Function()? addCurrentLocationMarker,
-    TResult? Function()? drawPolylineToDataLocation,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -45,8 +49,10 @@ mixin _$HomeEvent {
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
     TResult Function()? currentLocationRequested,
-    TResult Function()? addCurrentLocationMarker,
-    TResult Function()? drawPolylineToDataLocation,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -160,8 +166,10 @@ class _$DataLoadedImpl implements _DataLoaded {
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
     required TResult Function() currentLocationRequested,
-    required TResult Function() addCurrentLocationMarker,
-    required TResult Function() drawPolylineToDataLocation,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
   }) {
     return dataLoaded();
   }
@@ -174,8 +182,10 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
     TResult? Function()? currentLocationRequested,
-    TResult? Function()? addCurrentLocationMarker,
-    TResult? Function()? drawPolylineToDataLocation,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
   }) {
     return dataLoaded?.call();
   }
@@ -188,8 +198,10 @@ class _$DataLoadedImpl implements _DataLoaded {
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
     TResult Function()? currentLocationRequested,
-    TResult Function()? addCurrentLocationMarker,
-    TResult Function()? drawPolylineToDataLocation,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (dataLoaded != null) {
@@ -303,8 +315,10 @@ class _$MapInitializedImpl implements _MapInitialized {
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
     required TResult Function() currentLocationRequested,
-    required TResult Function() addCurrentLocationMarker,
-    required TResult Function() drawPolylineToDataLocation,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
   }) {
     return mapInitialized();
   }
@@ -317,8 +331,10 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
     TResult? Function()? currentLocationRequested,
-    TResult? Function()? addCurrentLocationMarker,
-    TResult? Function()? drawPolylineToDataLocation,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
   }) {
     return mapInitialized?.call();
   }
@@ -331,8 +347,10 @@ class _$MapInitializedImpl implements _MapInitialized {
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
     TResult Function()? currentLocationRequested,
-    TResult Function()? addCurrentLocationMarker,
-    TResult Function()? drawPolylineToDataLocation,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (mapInitialized != null) {
@@ -449,8 +467,10 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
     required TResult Function() currentLocationRequested,
-    required TResult Function() addCurrentLocationMarker,
-    required TResult Function() drawPolylineToDataLocation,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
   }) {
     return locationServiceChecked();
   }
@@ -463,8 +483,10 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
     TResult? Function()? currentLocationRequested,
-    TResult? Function()? addCurrentLocationMarker,
-    TResult? Function()? drawPolylineToDataLocation,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
   }) {
     return locationServiceChecked?.call();
   }
@@ -477,8 +499,10 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
     TResult Function()? currentLocationRequested,
-    TResult Function()? addCurrentLocationMarker,
-    TResult Function()? drawPolylineToDataLocation,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (locationServiceChecked != null) {
@@ -593,8 +617,10 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
     required TResult Function() currentLocationRequested,
-    required TResult Function() addCurrentLocationMarker,
-    required TResult Function() drawPolylineToDataLocation,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
   }) {
     return permissionRequested();
   }
@@ -607,8 +633,10 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
     TResult? Function()? currentLocationRequested,
-    TResult? Function()? addCurrentLocationMarker,
-    TResult? Function()? drawPolylineToDataLocation,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
   }) {
     return permissionRequested?.call();
   }
@@ -621,8 +649,10 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
     TResult Function()? currentLocationRequested,
-    TResult Function()? addCurrentLocationMarker,
-    TResult Function()? drawPolylineToDataLocation,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (permissionRequested != null) {
@@ -739,8 +769,10 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
     required TResult Function() currentLocationRequested,
-    required TResult Function() addCurrentLocationMarker,
-    required TResult Function() drawPolylineToDataLocation,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
   }) {
     return currentLocationRequested();
   }
@@ -753,8 +785,10 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
     TResult? Function()? currentLocationRequested,
-    TResult? Function()? addCurrentLocationMarker,
-    TResult? Function()? drawPolylineToDataLocation,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
   }) {
     return currentLocationRequested?.call();
   }
@@ -767,8 +801,10 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
     TResult Function()? currentLocationRequested,
-    TResult Function()? addCurrentLocationMarker,
-    TResult Function()? drawPolylineToDataLocation,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (currentLocationRequested != null) {
@@ -842,6 +878,8 @@ abstract class _$$AddCurrentLocationMarkerImplCopyWith<$Res> {
           _$AddCurrentLocationMarkerImpl value,
           $Res Function(_$AddCurrentLocationMarkerImpl) then) =
       __$$AddCurrentLocationMarkerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({maplibre.MapLibreMapController mapLibController});
 }
 
 /// @nodoc
@@ -855,27 +893,53 @@ class __$$AddCurrentLocationMarkerImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? mapLibController = null,
+  }) {
+    return _then(_$AddCurrentLocationMarkerImpl(
+      mapLibController: null == mapLibController
+          ? _value.mapLibController
+          : mapLibController // ignore: cast_nullable_to_non_nullable
+              as maplibre.MapLibreMapController,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
-  const _$AddCurrentLocationMarkerImpl();
+  const _$AddCurrentLocationMarkerImpl({required this.mapLibController});
+
+  @override
+  final maplibre.MapLibreMapController mapLibController;
 
   @override
   String toString() {
-    return 'HomeEvent.addCurrentLocationMarker()';
+    return 'HomeEvent.addCurrentLocationMarker(mapLibController: $mapLibController)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddCurrentLocationMarkerImpl);
+            other is _$AddCurrentLocationMarkerImpl &&
+            (identical(other.mapLibController, mapLibController) ||
+                other.mapLibController == mapLibController));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, mapLibController);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddCurrentLocationMarkerImplCopyWith<_$AddCurrentLocationMarkerImpl>
+      get copyWith => __$$AddCurrentLocationMarkerImplCopyWithImpl<
+          _$AddCurrentLocationMarkerImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -885,10 +949,12 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
     required TResult Function() currentLocationRequested,
-    required TResult Function() addCurrentLocationMarker,
-    required TResult Function() drawPolylineToDataLocation,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
   }) {
-    return addCurrentLocationMarker();
+    return addCurrentLocationMarker(mapLibController);
   }
 
   @override
@@ -899,10 +965,12 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
     TResult? Function()? currentLocationRequested,
-    TResult? Function()? addCurrentLocationMarker,
-    TResult? Function()? drawPolylineToDataLocation,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
   }) {
-    return addCurrentLocationMarker?.call();
+    return addCurrentLocationMarker?.call(mapLibController);
   }
 
   @override
@@ -913,12 +981,14 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
     TResult Function()? currentLocationRequested,
-    TResult Function()? addCurrentLocationMarker,
-    TResult Function()? drawPolylineToDataLocation,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (addCurrentLocationMarker != null) {
-      return addCurrentLocationMarker();
+      return addCurrentLocationMarker(mapLibController);
     }
     return orElse();
   }
@@ -979,7 +1049,17 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
 }
 
 abstract class _AddCurrentLocationMarker implements HomeEvent {
-  const factory _AddCurrentLocationMarker() = _$AddCurrentLocationMarkerImpl;
+  const factory _AddCurrentLocationMarker(
+          {required final maplibre.MapLibreMapController mapLibController}) =
+      _$AddCurrentLocationMarkerImpl;
+
+  maplibre.MapLibreMapController get mapLibController;
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddCurrentLocationMarkerImplCopyWith<_$AddCurrentLocationMarkerImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -988,6 +1068,8 @@ abstract class _$$DrawPolylineToDataLocationImplCopyWith<$Res> {
           _$DrawPolylineToDataLocationImpl value,
           $Res Function(_$DrawPolylineToDataLocationImpl) then) =
       __$$DrawPolylineToDataLocationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({maplibre.MapLibreMapController mapLibController});
 }
 
 /// @nodoc
@@ -1001,27 +1083,53 @@ class __$$DrawPolylineToDataLocationImplCopyWithImpl<$Res>
 
   /// Create a copy of HomeEvent
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? mapLibController = null,
+  }) {
+    return _then(_$DrawPolylineToDataLocationImpl(
+      mapLibController: null == mapLibController
+          ? _value.mapLibController
+          : mapLibController // ignore: cast_nullable_to_non_nullable
+              as maplibre.MapLibreMapController,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
-  const _$DrawPolylineToDataLocationImpl();
+  const _$DrawPolylineToDataLocationImpl({required this.mapLibController});
+
+  @override
+  final maplibre.MapLibreMapController mapLibController;
 
   @override
   String toString() {
-    return 'HomeEvent.drawPolylineToDataLocation()';
+    return 'HomeEvent.drawPolylineToDataLocation(mapLibController: $mapLibController)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DrawPolylineToDataLocationImpl);
+            other is _$DrawPolylineToDataLocationImpl &&
+            (identical(other.mapLibController, mapLibController) ||
+                other.mapLibController == mapLibController));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, mapLibController);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DrawPolylineToDataLocationImplCopyWith<_$DrawPolylineToDataLocationImpl>
+      get copyWith => __$$DrawPolylineToDataLocationImplCopyWithImpl<
+          _$DrawPolylineToDataLocationImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1031,10 +1139,12 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
     required TResult Function() locationServiceChecked,
     required TResult Function() permissionRequested,
     required TResult Function() currentLocationRequested,
-    required TResult Function() addCurrentLocationMarker,
-    required TResult Function() drawPolylineToDataLocation,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
   }) {
-    return drawPolylineToDataLocation();
+    return drawPolylineToDataLocation(mapLibController);
   }
 
   @override
@@ -1045,10 +1155,12 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
     TResult? Function()? locationServiceChecked,
     TResult? Function()? permissionRequested,
     TResult? Function()? currentLocationRequested,
-    TResult? Function()? addCurrentLocationMarker,
-    TResult? Function()? drawPolylineToDataLocation,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
   }) {
-    return drawPolylineToDataLocation?.call();
+    return drawPolylineToDataLocation?.call(mapLibController);
   }
 
   @override
@@ -1059,12 +1171,14 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
     TResult Function()? locationServiceChecked,
     TResult Function()? permissionRequested,
     TResult Function()? currentLocationRequested,
-    TResult Function()? addCurrentLocationMarker,
-    TResult Function()? drawPolylineToDataLocation,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
     required TResult orElse(),
   }) {
     if (drawPolylineToDataLocation != null) {
-      return drawPolylineToDataLocation();
+      return drawPolylineToDataLocation(mapLibController);
     }
     return orElse();
   }
@@ -1125,8 +1239,17 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
 }
 
 abstract class _DrawPolylineToDataLocation implements HomeEvent {
-  const factory _DrawPolylineToDataLocation() =
+  const factory _DrawPolylineToDataLocation(
+          {required final maplibre.MapLibreMapController mapLibController}) =
       _$DrawPolylineToDataLocationImpl;
+
+  maplibre.MapLibreMapController get mapLibController;
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DrawPolylineToDataLocationImplCopyWith<_$DrawPolylineToDataLocationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1135,11 +1258,10 @@ mixin _$HomeState {
   String get selectedValue => throw _privateConstructorUsedError;
   HomeStatus get status => throw _privateConstructorUsedError;
   bool get locationServiceEnabled => throw _privateConstructorUsedError;
-  bool get permissionGranted => throw _privateConstructorUsedError;
-  maplibre.MapLibreMapController? get mapController =>
-      throw _privateConstructorUsedError;
-  maplibre.LatLng? get currentLocation => throw _privateConstructorUsedError;
-  maplibre.LatLng? get dataLocation => throw _privateConstructorUsedError;
+  bool get permissionGranted =>
+      throw _privateConstructorUsedError; // maplibre.MapLibreMapController mapController,
+  maplibre.LatLng get currentLocation => throw _privateConstructorUsedError;
+  maplibre.LatLng get dataLocation => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -1159,9 +1281,8 @@ abstract class $HomeStateCopyWith<$Res> {
       HomeStatus status,
       bool locationServiceEnabled,
       bool permissionGranted,
-      maplibre.MapLibreMapController? mapController,
-      maplibre.LatLng? currentLocation,
-      maplibre.LatLng? dataLocation});
+      maplibre.LatLng currentLocation,
+      maplibre.LatLng dataLocation});
 }
 
 /// @nodoc
@@ -1184,9 +1305,8 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? status = null,
     Object? locationServiceEnabled = null,
     Object? permissionGranted = null,
-    Object? mapController = freezed,
-    Object? currentLocation = freezed,
-    Object? dataLocation = freezed,
+    Object? currentLocation = null,
+    Object? dataLocation = null,
   }) {
     return _then(_value.copyWith(
       reverceModelDataResponce: null == reverceModelDataResponce
@@ -1209,18 +1329,14 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.permissionGranted
           : permissionGranted // ignore: cast_nullable_to_non_nullable
               as bool,
-      mapController: freezed == mapController
-          ? _value.mapController
-          : mapController // ignore: cast_nullable_to_non_nullable
-              as maplibre.MapLibreMapController?,
-      currentLocation: freezed == currentLocation
+      currentLocation: null == currentLocation
           ? _value.currentLocation
           : currentLocation // ignore: cast_nullable_to_non_nullable
-              as maplibre.LatLng?,
-      dataLocation: freezed == dataLocation
+              as maplibre.LatLng,
+      dataLocation: null == dataLocation
           ? _value.dataLocation
           : dataLocation // ignore: cast_nullable_to_non_nullable
-              as maplibre.LatLng?,
+              as maplibre.LatLng,
     ) as $Val);
   }
 }
@@ -1239,9 +1355,8 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       HomeStatus status,
       bool locationServiceEnabled,
       bool permissionGranted,
-      maplibre.MapLibreMapController? mapController,
-      maplibre.LatLng? currentLocation,
-      maplibre.LatLng? dataLocation});
+      maplibre.LatLng currentLocation,
+      maplibre.LatLng dataLocation});
 }
 
 /// @nodoc
@@ -1262,9 +1377,8 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? status = null,
     Object? locationServiceEnabled = null,
     Object? permissionGranted = null,
-    Object? mapController = freezed,
-    Object? currentLocation = freezed,
-    Object? dataLocation = freezed,
+    Object? currentLocation = null,
+    Object? dataLocation = null,
   }) {
     return _then(_$HomeStateImpl(
       reverceModelDataResponce: null == reverceModelDataResponce
@@ -1287,18 +1401,14 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.permissionGranted
           : permissionGranted // ignore: cast_nullable_to_non_nullable
               as bool,
-      mapController: freezed == mapController
-          ? _value.mapController
-          : mapController // ignore: cast_nullable_to_non_nullable
-              as maplibre.MapLibreMapController?,
-      currentLocation: freezed == currentLocation
+      currentLocation: null == currentLocation
           ? _value.currentLocation
           : currentLocation // ignore: cast_nullable_to_non_nullable
-              as maplibre.LatLng?,
-      dataLocation: freezed == dataLocation
+              as maplibre.LatLng,
+      dataLocation: null == dataLocation
           ? _value.dataLocation
           : dataLocation // ignore: cast_nullable_to_non_nullable
-              as maplibre.LatLng?,
+              as maplibre.LatLng,
     ));
   }
 }
@@ -1312,9 +1422,10 @@ class _$HomeStateImpl implements _HomeState {
       this.status = HomeStatus.initial,
       this.locationServiceEnabled = false,
       this.permissionGranted = false,
-      this.mapController,
-      this.currentLocation,
-      this.dataLocation});
+      this.currentLocation =
+          const maplibre.LatLng(23.823862245054432, 90.36452020536662),
+      this.dataLocation =
+          const maplibre.LatLng(23.823862245054432, 90.36452020536662)});
 
   @override
   @JsonKey()
@@ -1331,16 +1442,17 @@ class _$HomeStateImpl implements _HomeState {
   @override
   @JsonKey()
   final bool permissionGranted;
+// maplibre.MapLibreMapController mapController,
   @override
-  final maplibre.MapLibreMapController? mapController;
+  @JsonKey()
+  final maplibre.LatLng currentLocation;
   @override
-  final maplibre.LatLng? currentLocation;
-  @override
-  final maplibre.LatLng? dataLocation;
+  @JsonKey()
+  final maplibre.LatLng dataLocation;
 
   @override
   String toString() {
-    return 'HomeState(reverceModelDataResponce: $reverceModelDataResponce, selectedValue: $selectedValue, status: $status, locationServiceEnabled: $locationServiceEnabled, permissionGranted: $permissionGranted, mapController: $mapController, currentLocation: $currentLocation, dataLocation: $dataLocation)';
+    return 'HomeState(reverceModelDataResponce: $reverceModelDataResponce, selectedValue: $selectedValue, status: $status, locationServiceEnabled: $locationServiceEnabled, permissionGranted: $permissionGranted, currentLocation: $currentLocation, dataLocation: $dataLocation)';
   }
 
   @override
@@ -1358,8 +1470,6 @@ class _$HomeStateImpl implements _HomeState {
                 other.locationServiceEnabled == locationServiceEnabled) &&
             (identical(other.permissionGranted, permissionGranted) ||
                 other.permissionGranted == permissionGranted) &&
-            (identical(other.mapController, mapController) ||
-                other.mapController == mapController) &&
             (identical(other.currentLocation, currentLocation) ||
                 other.currentLocation == currentLocation) &&
             (identical(other.dataLocation, dataLocation) ||
@@ -1374,7 +1484,6 @@ class _$HomeStateImpl implements _HomeState {
       status,
       locationServiceEnabled,
       permissionGranted,
-      mapController,
       currentLocation,
       dataLocation);
 
@@ -1394,9 +1503,8 @@ abstract class _HomeState implements HomeState {
       final HomeStatus status,
       final bool locationServiceEnabled,
       final bool permissionGranted,
-      final maplibre.MapLibreMapController? mapController,
-      final maplibre.LatLng? currentLocation,
-      final maplibre.LatLng? dataLocation}) = _$HomeStateImpl;
+      final maplibre.LatLng currentLocation,
+      final maplibre.LatLng dataLocation}) = _$HomeStateImpl;
 
   @override
   Reverce get reverceModelDataResponce;
@@ -1407,13 +1515,11 @@ abstract class _HomeState implements HomeState {
   @override
   bool get locationServiceEnabled;
   @override
-  bool get permissionGranted;
+  bool get permissionGranted; // maplibre.MapLibreMapController mapController,
   @override
-  maplibre.MapLibreMapController? get mapController;
+  maplibre.LatLng get currentLocation;
   @override
-  maplibre.LatLng? get currentLocation;
-  @override
-  maplibre.LatLng? get dataLocation;
+  maplibre.LatLng get dataLocation;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.

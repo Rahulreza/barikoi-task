@@ -1,7 +1,6 @@
 import 'package:barikoi/features/core/path/file_path.dart';
-import 'package:barikoi/features/core/path/image_path.dart';
-import 'package:flutter/foundation.dart';
 import 'package:maplibre_gl/maplibre_gl.dart' as maplibre;
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,8 +23,6 @@ class _HomePageState extends State<HomePage> {
     homeBloc.add(const HomeEvent.mapInitialized());
     homeBloc.add(const HomeEvent.currentLocationRequested());
     homeBloc.add(const HomeEvent.dataLoaded());
-    homeBloc.add(const HomeEvent.addCurrentLocationMarker());
-    homeBloc.add(const HomeEvent.drawPolylineToDataLocation());
 
   }
 
@@ -35,8 +32,7 @@ class _HomePageState extends State<HomePage> {
     homeBloc.add(const HomeEvent.mapInitialized());
     homeBloc.add(const HomeEvent.currentLocationRequested());
     homeBloc.add(const HomeEvent.dataLoaded());
-    homeBloc.add(const HomeEvent.addCurrentLocationMarker());
-    homeBloc.add(const HomeEvent.drawPolylineToDataLocation());
+
   }
 
   Future<void> _showLocationDialog(BuildContext context,
@@ -73,53 +69,41 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      body: RefreshIndicator(
-        onRefresh: _refresh,
-        child: BlocBuilder<HomeBloc, HomeState>(
+      body: SafeArea(
+        child: RefreshIndicator(
+          onRefresh: _refresh,
+          child: BlocBuilder<HomeBloc, HomeState>(
+            builder: (context, state) {
+              if (!state.locationServiceEnabled) {
+                _showLocationDialog(context, serviceEnabled: false);
+              } else if (!state.permissionGranted) {
+                _showLocationDialog(context, serviceEnabled: true, permissionDenied: true);
+              }
 
-          builder: (context, state) {
-            if (kDebugMode) {
-              print("I am called from home page:${state.currentLocation} ${state.dataLocation}");
-            }
-            if (!state.locationServiceEnabled) {
-              _showLocationDialog(context, serviceEnabled: false);
-            } else if (!state.permissionGranted) {
-              _showLocationDialog(context, serviceEnabled: true, permissionDenied: true);
-            }
+              if (state.status == HomeStatus.initial) {
+                return const Center(child: CircularProgressIndicator());
+              } else if (state.status == HomeStatus.failure) {
+                return const Center(child: Text('Failed to load data.'));
+              } else {
+                final initialCameraPosition = state.currentLocation;
 
-            if (state.status == HomeStatus.initial) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (state.status == HomeStatus.failure) {
-              return const Center(child: Text('Failed to load data.'));
-            } else {
-              return maplibre.MapLibreMap(
-                initialCameraPosition: maplibre.CameraPosition(
-                  target: maplibre.LatLng(23.82370521059016, 90.36413396728604),
-                  zoom: 12,
-                ),
-                onMapCreated: (controller) {
-                  mController = controller;
-                  homeBloc.add(const HomeEvent.mapInitialized());
-                  if (state.currentLocation != null) {
-                    mController.animateCamera(
-                      maplibre.CameraUpdate.newLatLng(state.currentLocation!),
-                    );
-                    mController.addSymbol(
-                      maplibre.SymbolOptions(
-                        geometry: state.currentLocation!,
-                        iconImage: LocationIcon.currentLocationIcon,
-                        iconSize: 0.5,
-                      ),
-                    );
-                  }
-                },
-                styleString:
-                'https://map.barikoi.com/styles/osm-liberty/style.json?key=bkoi_5bacf61a76e5047364b3540a662f1ee5865f03ef8736d7475f18538c3fb52a8e',
-              );
-            }
-          },
+                return maplibre.MapLibreMap(
+                  initialCameraPosition: maplibre.CameraPosition(
+                    target: initialCameraPosition,
+                    zoom: 12,
+                  ),
+                  onMapCreated: (controller) async{
+                    mController = controller;
+                    homeBloc.add(const HomeEvent.mapInitialized());
+                    await Future.delayed(Duration(milliseconds: 500));
+                    homeBloc.add( HomeEvent.addCurrentLocationMarker(mapLibController: mController));
+                    },
+                  styleString: 'https://map.barikoi.com/styles/osm-liberty/style.json?key=bkoi_5bacf61a76e5047364b3540a662f1ee5865f03ef8736d7475f18538c3fb52a8e',
+                );
+              }
+            },
+          ),
         ),
       ),
     );

@@ -20,11 +20,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
             await _locationServiceChecked(event, emit),
         permissionRequested: (event) async =>
             await _permissionRequested(event, emit),
-        currentLocationRequested: (event) async => await _getCurrentLocation(event, emit),
+        currentLocationRequested: (event) async =>
+            await _getCurrentLocation(event, emit),
         addCurrentLocationMarker: (event) async =>
-        await _addCurrentLocationMarker(event, emit),
+            await _addCurrentLocationMarker(event, emit),
         drawPolylineToDataLocation: (event) async =>
-        await _drawPolylineToDataLocation(event, emit),
+            await _drawPolylineToDataLocation(event, emit),
       );
     });
   }
@@ -39,9 +40,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       }
       final reverceGeocodingDataResponse =
           await homeRepository.reverceGeoCodingMapDataSubmit();
-      final placeLocation = maplibre.LatLng(
-          23.823862245054432, 90.36452020536662
-      );
+      final placeLocation =
+          maplibre.LatLng(23.823862245054432, 90.36452020536662);
       emit(state.copyWith(
         reverceModelDataResponce: reverceGeocodingDataResponse,
         dataLocation: placeLocation,
@@ -49,7 +49,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       ));
       if (kDebugMode) {
         print(
-          "I am from home bloc reverceGeocodingDataResponse: $reverceGeocodingDataResponse");
+            "I am from home bloc reverceGeocodingDataResponse: $reverceGeocodingDataResponse");
       }
     } catch (e) {
       emit(state.copyWith(status: HomeStatus.failure));
@@ -73,6 +73,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   Future<void> _permissionRequested(
       _PermissionRequested event, Emitter<HomeState> emit) async {
     PermissionStatus permission = await location.hasPermission();
+
     if (permission == PermissionStatus.denied) {
       permission = await location.requestPermission();
     }
@@ -83,123 +84,98 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   Future<void> _getCurrentLocation(
       _CurrentLocationRequested event, Emitter<HomeState> emit) async {
     if (kDebugMode) {
-      print("I am here Current location from get current location");
+      print("Getting current location...");
     }
 
-    // Check if location service is enabled
     bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      // Notify the user to enable location services
-      if (kDebugMode) {
-        print("Location services are disabled. Please enable them.");
-      }
-      return;  // If location service is not enabled, don't proceed further.
+      if (kDebugMode) print("Location services are disabled.");
+      return;
     }
 
-    // Check permission status
     LocationPermission permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied || permission == LocationPermission.deniedForever) {
-      // Request permission
+    if (permission == LocationPermission.denied ||
+        permission == LocationPermission.deniedForever) {
       permission = await Geolocator.requestPermission();
     }
 
-    if (permission == LocationPermission.always || permission == LocationPermission.whileInUse) {
+    if (permission == LocationPermission.always ||
+        permission == LocationPermission.whileInUse) {
       try {
         Position position = await Geolocator.getCurrentPosition();
-        maplibre.LatLng currentLocation = maplibre.LatLng(
-          position.latitude,
-          position.longitude,
-        );
-
         if (kDebugMode) {
-          print("Current Location: $currentLocation");
+          print("position: $position");
         }
-
-        // Update state with the current location
-        emit(state.copyWith(currentLocation: currentLocation));
-
-        // Trigger adding the marker after location is obtained
-        add(const HomeEvent.addCurrentLocationMarker());
+        final currentLocation =
+            maplibre.LatLng(position.latitude, position.longitude);
+        if (kDebugMode) {
+          print("currentLocation: $currentLocation");
+        }
+        emit(state.copyWith(
+            currentLocation: currentLocation, status: HomeStatus.success));
       } catch (e) {
-        if (kDebugMode) {
-          print("Error getting current location: $e");
-        }
         emit(state.copyWith(status: HomeStatus.failure));
+        if (kDebugMode) print("Error getting current location: $e");
       }
     } else {
-      if (kDebugMode) {
-        print("Location permission denied.");
-      }
+      if (kDebugMode) print("Location permission denied.");
       emit(state.copyWith(status: HomeStatus.failure));
     }
   }
 
   Future<void> _addCurrentLocationMarker(
       _AddCurrentLocationMarker event, Emitter<HomeState> emit) async {
-    if (state.mapController != null && state.currentLocation != null) {
-      if (kDebugMode) {
-        print("Adding current location marker to map");
-      }
-
-      await state.mapController!.addSymbol(
+    if (kDebugMode) {
+      print("stateLocation:${state.currentLocation} ${event.mapLibController}");
+    }
+    try {
+      await event.mapLibController.addSymbol(
         maplibre.SymbolOptions(
-          geometry: state.currentLocation!,
-          iconImage: LocationIcon.currentLocationIcon,
-          iconSize: 1.0, // Adjust icon size as needed
+          geometry: state.currentLocation,
+          iconImage: "assets/images/current_location.png",
+          iconSize: 0.2,
         ),
       );
       emit(state.copyWith(status: HomeStatus.success));
-
       if (kDebugMode) {
         print("Current Location Marker Added!");
       }
-    } else {
+    } catch (e) {
       if (kDebugMode) {
-        print("MapController or current location is null. Cannot add marker.");
+        print("AddCurrent Location Error: $e");
       }
     }
   }
+
 
   Future<void> _drawPolylineToDataLocation(
       _DrawPolylineToDataLocation event, Emitter<HomeState> emit) async {
-    if (state.mapController != null &&
-        state.currentLocation != null &&
-        state.dataLocation != null) {
-      if (kDebugMode) {
-        print("All Data: ${state.mapController} ${state.currentLocation} ${state.dataLocation}");
-        print("Drawing polyline from current location to data location");
-      }
-
-      await state.mapController!.addLine(
-        maplibre.LineOptions(
-          geometry: [state.currentLocation!, state.dataLocation!],
-          lineColor: "#FF5733",
-          lineWidth: 4.0,
-        ),
-      );
-
-      await state.mapController!.addSymbol(
-        maplibre.SymbolOptions(
-          geometry: state.dataLocation!,
-          iconImage: LocationIcon.sourceLocationIcon,
-          iconSize: 0.5,
-        ),
-      );
-
-      emit(state.copyWith(status: HomeStatus.success));
-
-      if (kDebugMode) {
-        print("Polyline drawn and symbol added at data location");
-      }
-    } else {
-      if (kDebugMode) {
-        print("MapController, current location, or data location is null.");
-        if (state.mapController == null) print("MapController is null");
-        if (state.currentLocation == null) print("Current location is null");
-        if (state.dataLocation == null) print("Data location is null");
-      }
+    if (kDebugMode) {
+      print(
+          "All Data: ${event.mapLibController} ${state.currentLocation} ${state.dataLocation}");
+      print("Drawing polyline from current location to data location");
     }
-  }
 
+    await event.mapLibController.addLine(
+      maplibre.LineOptions(
+        geometry: [state.currentLocation, state.dataLocation],
+        lineColor: "#FF5733",
+        lineWidth: 4.0,
+      ),
+    );
 
+    await event.mapLibController.addSymbol(
+      maplibre.SymbolOptions(
+        geometry: state.dataLocation,
+        iconImage: LocationIcon.sourceLocationIcon,
+        iconSize: 0.5,
+      ),
+    );
+
+    emit(state.copyWith(status: HomeStatus.success));
+
+    if (kDebugMode) {
+      print("Polyline drawn and symbol added at data location");
+    }
+    }
 }
