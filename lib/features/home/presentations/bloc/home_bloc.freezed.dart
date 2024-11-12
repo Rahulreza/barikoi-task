@@ -30,6 +30,7 @@ mixin _$HomeEvent {
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -46,6 +47,7 @@ mixin _$HomeEvent {
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,6 +64,7 @@ mixin _$HomeEvent {
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -80,6 +83,7 @@ mixin _$HomeEvent {
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -96,6 +100,7 @@ mixin _$HomeEvent {
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -110,6 +115,7 @@ mixin _$HomeEvent {
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -188,6 +194,7 @@ class _$DataLoadedImpl implements _DataLoaded {
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) {
     return dataLoaded();
   }
@@ -207,6 +214,7 @@ class _$DataLoadedImpl implements _DataLoaded {
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) {
     return dataLoaded?.call();
   }
@@ -226,6 +234,7 @@ class _$DataLoadedImpl implements _DataLoaded {
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (dataLoaded != null) {
@@ -250,6 +259,7 @@ class _$DataLoadedImpl implements _DataLoaded {
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) {
     return dataLoaded(this);
   }
@@ -269,6 +279,7 @@ class _$DataLoadedImpl implements _DataLoaded {
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) {
     return dataLoaded?.call(this);
   }
@@ -286,6 +297,7 @@ class _$DataLoadedImpl implements _DataLoaded {
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (dataLoaded != null) {
@@ -352,6 +364,7 @@ class _$MapInitializedImpl implements _MapInitialized {
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) {
     return mapInitialized();
   }
@@ -371,6 +384,7 @@ class _$MapInitializedImpl implements _MapInitialized {
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) {
     return mapInitialized?.call();
   }
@@ -390,6 +404,7 @@ class _$MapInitializedImpl implements _MapInitialized {
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (mapInitialized != null) {
@@ -414,6 +429,7 @@ class _$MapInitializedImpl implements _MapInitialized {
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) {
     return mapInitialized(this);
   }
@@ -433,6 +449,7 @@ class _$MapInitializedImpl implements _MapInitialized {
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) {
     return mapInitialized?.call(this);
   }
@@ -450,6 +467,7 @@ class _$MapInitializedImpl implements _MapInitialized {
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (mapInitialized != null) {
@@ -519,6 +537,7 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) {
     return locationServiceChecked();
   }
@@ -538,6 +557,7 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) {
     return locationServiceChecked?.call();
   }
@@ -557,6 +577,7 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (locationServiceChecked != null) {
@@ -581,6 +602,7 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) {
     return locationServiceChecked(this);
   }
@@ -600,6 +622,7 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) {
     return locationServiceChecked?.call(this);
   }
@@ -617,6 +640,7 @@ class _$LocationServiceCheckedImpl implements _LocationServiceChecked {
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (locationServiceChecked != null) {
@@ -684,6 +708,7 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) {
     return permissionRequested();
   }
@@ -703,6 +728,7 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) {
     return permissionRequested?.call();
   }
@@ -722,6 +748,7 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (permissionRequested != null) {
@@ -746,6 +773,7 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) {
     return permissionRequested(this);
   }
@@ -765,6 +793,7 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) {
     return permissionRequested?.call(this);
   }
@@ -782,6 +811,7 @@ class _$PermissionRequestedImpl implements _PermissionRequested {
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (permissionRequested != null) {
@@ -851,6 +881,7 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) {
     return currentLocationRequested();
   }
@@ -870,6 +901,7 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) {
     return currentLocationRequested?.call();
   }
@@ -889,6 +921,7 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (currentLocationRequested != null) {
@@ -913,6 +946,7 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) {
     return currentLocationRequested(this);
   }
@@ -932,6 +966,7 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) {
     return currentLocationRequested?.call(this);
   }
@@ -949,6 +984,7 @@ class _$CurrentLocationRequestedImpl implements _CurrentLocationRequested {
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (currentLocationRequested != null) {
@@ -1046,6 +1082,7 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) {
     return addCurrentLocationMarker(mapLibController);
   }
@@ -1065,6 +1102,7 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) {
     return addCurrentLocationMarker?.call(mapLibController);
   }
@@ -1084,6 +1122,7 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (addCurrentLocationMarker != null) {
@@ -1108,6 +1147,7 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) {
     return addCurrentLocationMarker(this);
   }
@@ -1127,6 +1167,7 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) {
     return addCurrentLocationMarker?.call(this);
   }
@@ -1144,6 +1185,7 @@ class _$AddCurrentLocationMarkerImpl implements _AddCurrentLocationMarker {
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (addCurrentLocationMarker != null) {
@@ -1263,6 +1305,7 @@ class _$AddDestinationLocationMarkerImpl
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) {
     return addDestinationLocationMarker(mapLibController, context);
   }
@@ -1282,6 +1325,7 @@ class _$AddDestinationLocationMarkerImpl
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) {
     return addDestinationLocationMarker?.call(mapLibController, context);
   }
@@ -1301,6 +1345,7 @@ class _$AddDestinationLocationMarkerImpl
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (addDestinationLocationMarker != null) {
@@ -1325,6 +1370,7 @@ class _$AddDestinationLocationMarkerImpl
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) {
     return addDestinationLocationMarker(this);
   }
@@ -1344,6 +1390,7 @@ class _$AddDestinationLocationMarkerImpl
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) {
     return addDestinationLocationMarker?.call(this);
   }
@@ -1361,6 +1408,7 @@ class _$AddDestinationLocationMarkerImpl
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (addDestinationLocationMarker != null) {
@@ -1471,6 +1519,7 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
         addDestinationLocationMarker,
     required TResult Function(maplibre.MapLibreMapController mapLibController)
         drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
   }) {
     return drawPolylineToDataLocation(mapLibController);
   }
@@ -1490,6 +1539,7 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
         addDestinationLocationMarker,
     TResult? Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
   }) {
     return drawPolylineToDataLocation?.call(mapLibController);
   }
@@ -1509,6 +1559,7 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
         addDestinationLocationMarker,
     TResult Function(maplibre.MapLibreMapController mapLibController)?
         drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (drawPolylineToDataLocation != null) {
@@ -1533,6 +1584,7 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
         addDestinationLocationMarker,
     required TResult Function(_DrawPolylineToDataLocation value)
         drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
   }) {
     return drawPolylineToDataLocation(this);
   }
@@ -1552,6 +1604,7 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
         addDestinationLocationMarker,
     TResult? Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
   }) {
     return drawPolylineToDataLocation?.call(this);
   }
@@ -1569,6 +1622,7 @@ class _$DrawPolylineToDataLocationImpl implements _DrawPolylineToDataLocation {
         addDestinationLocationMarker,
     TResult Function(_DrawPolylineToDataLocation value)?
         drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
     required TResult orElse(),
   }) {
     if (drawPolylineToDataLocation != null) {
@@ -1590,6 +1644,213 @@ abstract class _DrawPolylineToDataLocation implements HomeEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DrawPolylineToDataLocationImplCopyWith<_$DrawPolylineToDataLocationImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ShowLocationDialogImplCopyWith<$Res> {
+  factory _$$ShowLocationDialogImplCopyWith(_$ShowLocationDialogImpl value,
+          $Res Function(_$ShowLocationDialogImpl) then) =
+      __$$ShowLocationDialogImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BuildContext context});
+}
+
+/// @nodoc
+class __$$ShowLocationDialogImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$ShowLocationDialogImpl>
+    implements _$$ShowLocationDialogImplCopyWith<$Res> {
+  __$$ShowLocationDialogImplCopyWithImpl(_$ShowLocationDialogImpl _value,
+      $Res Function(_$ShowLocationDialogImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? context = null,
+  }) {
+    return _then(_$ShowLocationDialogImpl(
+      context: null == context
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ShowLocationDialogImpl implements _ShowLocationDialog {
+  const _$ShowLocationDialogImpl({required this.context});
+
+  @override
+  final BuildContext context;
+
+  @override
+  String toString() {
+    return 'HomeEvent.showLocationDialog(context: $context)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ShowLocationDialogImpl &&
+            (identical(other.context, context) || other.context == context));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, context);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ShowLocationDialogImplCopyWith<_$ShowLocationDialogImpl> get copyWith =>
+      __$$ShowLocationDialogImplCopyWithImpl<_$ShowLocationDialogImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() dataLoaded,
+    required TResult Function() mapInitialized,
+    required TResult Function() locationServiceChecked,
+    required TResult Function() permissionRequested,
+    required TResult Function() currentLocationRequested,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        addCurrentLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)
+        addDestinationLocationMarker,
+    required TResult Function(maplibre.MapLibreMapController mapLibController)
+        drawPolylineToDataLocation,
+    required TResult Function(BuildContext context) showLocationDialog,
+  }) {
+    return showLocationDialog(context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? dataLoaded,
+    TResult? Function()? mapInitialized,
+    TResult? Function()? locationServiceChecked,
+    TResult? Function()? permissionRequested,
+    TResult? Function()? currentLocationRequested,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
+    TResult? Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
+    TResult? Function(BuildContext context)? showLocationDialog,
+  }) {
+    return showLocationDialog?.call(context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? dataLoaded,
+    TResult Function()? mapInitialized,
+    TResult Function()? locationServiceChecked,
+    TResult Function()? permissionRequested,
+    TResult Function()? currentLocationRequested,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        addCurrentLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController,
+            BuildContext context)?
+        addDestinationLocationMarker,
+    TResult Function(maplibre.MapLibreMapController mapLibController)?
+        drawPolylineToDataLocation,
+    TResult Function(BuildContext context)? showLocationDialog,
+    required TResult orElse(),
+  }) {
+    if (showLocationDialog != null) {
+      return showLocationDialog(context);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DataLoaded value) dataLoaded,
+    required TResult Function(_MapInitialized value) mapInitialized,
+    required TResult Function(_LocationServiceChecked value)
+        locationServiceChecked,
+    required TResult Function(_PermissionRequested value) permissionRequested,
+    required TResult Function(_CurrentLocationRequested value)
+        currentLocationRequested,
+    required TResult Function(_AddCurrentLocationMarker value)
+        addCurrentLocationMarker,
+    required TResult Function(_AddDestinationLocationMarker value)
+        addDestinationLocationMarker,
+    required TResult Function(_DrawPolylineToDataLocation value)
+        drawPolylineToDataLocation,
+    required TResult Function(_ShowLocationDialog value) showLocationDialog,
+  }) {
+    return showLocationDialog(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DataLoaded value)? dataLoaded,
+    TResult? Function(_MapInitialized value)? mapInitialized,
+    TResult? Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult? Function(_PermissionRequested value)? permissionRequested,
+    TResult? Function(_CurrentLocationRequested value)?
+        currentLocationRequested,
+    TResult? Function(_AddCurrentLocationMarker value)?
+        addCurrentLocationMarker,
+    TResult? Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
+    TResult? Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+    TResult? Function(_ShowLocationDialog value)? showLocationDialog,
+  }) {
+    return showLocationDialog?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DataLoaded value)? dataLoaded,
+    TResult Function(_MapInitialized value)? mapInitialized,
+    TResult Function(_LocationServiceChecked value)? locationServiceChecked,
+    TResult Function(_PermissionRequested value)? permissionRequested,
+    TResult Function(_CurrentLocationRequested value)? currentLocationRequested,
+    TResult Function(_AddCurrentLocationMarker value)? addCurrentLocationMarker,
+    TResult Function(_AddDestinationLocationMarker value)?
+        addDestinationLocationMarker,
+    TResult Function(_DrawPolylineToDataLocation value)?
+        drawPolylineToDataLocation,
+    TResult Function(_ShowLocationDialog value)? showLocationDialog,
+    required TResult orElse(),
+  }) {
+    if (showLocationDialog != null) {
+      return showLocationDialog(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShowLocationDialog implements HomeEvent {
+  const factory _ShowLocationDialog({required final BuildContext context}) =
+      _$ShowLocationDialogImpl;
+
+  BuildContext get context;
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ShowLocationDialogImplCopyWith<_$ShowLocationDialogImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

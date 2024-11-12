@@ -18,4 +18,5 @@ class HomeEvent with _$HomeEvent {
   const factory HomeEvent.drawPolylineToDataLocation(
           {required maplibre.MapLibreMapController mapLibController}) =
       _DrawPolylineToDataLocation;
+  const factory HomeEvent.showLocationDialog({required BuildContext context}) = _ShowLocationDialog;
 }

@@ -1,6 +1,6 @@
 part of 'home_bloc.dart';
 
-enum HomeStatus { initial, success, failure }
+enum HomeStatus { initial, success, failure,showDialog }
 
 @Freezed(copyWith: true, equal: true)
 class HomeState with _$HomeState {

@@ -27,7 +27,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         drawPolylineToDataLocation: (event) async =>
             await _drawPolylineToDataLocation(event, emit),
         addDestinationLocationMarker: (event) async =>
-            await _addDestinationLocationMarker(event, emit),
+        await _addDestinationLocationMarker(event, emit),
+        showLocationDialog: (event) async =>
+        await _showLocationDialog(event, emit),
       );
     });
   }
@@ -53,6 +55,46 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       _MapInitialized event, Emitter<HomeState> emit) async {
     emit(state.copyWith(status: HomeStatus.success));
   }
+  Future<void> _showLocationDialog(
+      _ShowLocationDialog event, Emitter<HomeState> emit) async {
+    if (kDebugMode) {
+      print("marker printed");
+    }
+    emit(state.copyWith(status: HomeStatus.showDialog));
+
+   // Use a post-frame callback to ensure the modal bottom sheet shows after the frame is completed
+   /* Future.delayed(Duration.zero, () {
+      showModalBottomSheet(
+        context: event.context,
+        builder: (BuildContext context) {
+          return Container(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Location Details',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 10),
+                Text('Place Name: ${state.reverceModelDataResponce.place}'),
+                const SizedBox(height: 5),
+                Text('Address: ${state.reverceModelDataResponce.status}'),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('Close'),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    });*/
+
+  }
+
 
   Future<void> _locationServiceChecked(
       _LocationServiceChecked event, Emitter<HomeState> emit) async {
@@ -134,8 +176,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         print("Current Location Marker Added!");
       }
       // Trigger polyline drawing if both locations are set
-      add(HomeEvent.drawPolylineToDataLocation(mapLibController: event.mapLibController));
-        } catch (e) {
+      add(HomeEvent.drawPolylineToDataLocation(
+          mapLibController: event.mapLibController));
+    } catch (e) {
       if (kDebugMode) {
         print("AddCurrent Location Error: $e");
       }
@@ -148,8 +191,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       await event.mapLibController.addSymbol(
         maplibre.SymbolOptions(
           geometry: state.dataLocation,
-          iconImage:
-              "assets/images/source_location.png",
+          iconImage: "assets/images/source_location.png",
           iconSize: 0.2,
         ),
       );
@@ -160,20 +202,14 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       // Trigger polyline drawing if both locations are set
       add(HomeEvent.drawPolylineToDataLocation(mapLibController: event.mapLibController));
 
-      // Set up the symbol tap listener to open the dialog
+      /*// Set up the symbol tap listener to trigger an event for the dialog
       event.mapLibController.onSymbolTapped.add((symbol) {
         if (kDebugMode) {
           print("Clicked to show dialog in bloc");
         }
-        showDialog(
-          context: event.context,
-          builder: (context) => AlertDialog(
-            title: Text('Marker Details'),
-            content: Text('Location: ${state.reverceModelDataResponce.place}'),
-          ),
-        );
-      });
-        } catch (e) {
+        add(HomeEvent.showLocationDialog());
+      });*/
+    } catch (e) {
       if (kDebugMode) {
         print("Add Destination Location Error: $e");
       }
